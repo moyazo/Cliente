@@ -1,3 +1,4 @@
+"use strict"
 const firstElDOM = document.querySelector("div").firstChild.nodeValue;  // Para acceder al primer elemento de un etiqueta usamos TAG.firstchild
 
 
