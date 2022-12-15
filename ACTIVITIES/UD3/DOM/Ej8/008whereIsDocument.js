@@ -2,7 +2,7 @@
 
 // Dónde está el "document" en la jerarquía?
 
-// En la jerarquía del DOM, tenemos como elemento padre EventTarget del cual heréda Node.
+// En la jerarquía del DOM, tenemos como elemento padre EventTarget del cual heréda de Node.
 
 
 // ¿A qué clase pertenece el document?
