@@ -15,12 +15,10 @@ thELEMS[1].onclick = () => {
 
 
 const sortColumn = (dataType) => {
-    const tdArray = Object.values(tdELEMS)
+    const tdArray = Object.values(tdELEMS) 
     if(dataType === "number"){
-        console.log(tdArray)
-        const tdSORTnumber = tdArray.map(td => td.value === "number")
+        
 
-        console.log(tdSORTnumber);
   
     }else if(dataType === "string"){
 

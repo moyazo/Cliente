@@ -20,9 +20,9 @@ function createCalendar(elem, year, month) {
   // espacios en la primera línea
   // desde lunes hasta el primer día del mes
   // * * * 1  2  3  4
-  for (let i = 0; i < getDay(day); i++) {
-    table += '<td></td>';
-  }
+  // for (let i = 0; i < getDay(day); i++) {
+  //   table += '<td></td>';
+  // }
 
   // <td> con el día  (1 - 31)
   while (day.getMonth() == mon) {
@@ -32,16 +32,16 @@ function createCalendar(elem, year, month) {
       table += '</tr><tr>';
     }
 
-    day.setDate(day.getDate() + 1);
-  }
+     day.setDate(day.getDate() + 1);
+   }
 
   // espacios después del último día del mes hasta completar la última línea
   // 29 30 31 * * * *
-  if (getDay(day) != 0) {
-    for (let i = getDay(day); i < 7; i++) {
-      table += '<td></td>';
-    }
-  }
+  // if (getDay(day) != 0) {
+  //   for (let i = getDay(day); i < 7; i++) {
+  //     table += '<td></td>';
+  //   }
+  // }
 
   // cerrar la tabla
   table += '</tr></table>';
@@ -49,9 +49,9 @@ function createCalendar(elem, year, month) {
   elem.innerHTML = table;
 }
 
-function getDay(date) { // obtiene el número de día desde 0 (lunes) a 6 (domingo)
+function getDay(date) { 
   let day = date.getDate()
-  if (day == 0) day = 7; // hacer domingo (0) el último día
+  if (day == 0) day = 7; 
   return day - 1;
 }
 
