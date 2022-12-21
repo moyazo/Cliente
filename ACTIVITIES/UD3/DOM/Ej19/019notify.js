@@ -1,27 +1,26 @@
 "use strict"
 
 const showNotification = () => {
-  const divDOM = document.createElement("div")
-  divDOM.setAttribute("class","notification welcome")
+  const divDOM = document.createElement("div") // Creamos un div
+  divDOM.setAttribute("class","notification welcome") // Le añadimos las clases correspondiantes
   const divText = document.createTextNode("Hello")
-  divDOM.append(divText)
-  document.body.append(divDOM)
+  divDOM.append(divText) // Añadimos al nodo padre
+  document.body.append(divDOM) // Añadimos al DOM
 }
 
 const removeNotification = () => {
-    const divDOM = document.querySelector("div")
-    divDOM.remove();
+    const divDOM = document.querySelector("div") // Obtenemos nuestro div
+    divDOM.remove(); // Lo eleminamos con remove
 }
 
 
 
 showNotification();
 
-let aux = 0;
+let aux = 0; // variable auxiliar para controlar el intervalo
 const intervalID = setInterval(()=>{
-  aux++
-  console.log(aux)
-    if(aux == 15){
+  aux++ // incrementamos 
+    if(aux == 15){ // Cuando llegue a 15 seg detendremos el intervalo con clearInterval y llamaremos a nuestra función
      removeNotification()
      clearInterval(intervalID)
     }

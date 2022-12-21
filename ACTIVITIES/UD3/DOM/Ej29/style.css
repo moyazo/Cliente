@@ -6,6 +6,10 @@ body{
   align-items: center;
 }
 
-img{
-  width:  150px;
+.selected{
+  background-color: rgb(0, 255, 0);
+}
+
+.Nonselected{
+  background-color: rgb(255, 255, 255);
 }

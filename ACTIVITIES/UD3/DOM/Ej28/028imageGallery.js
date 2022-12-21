@@ -3,35 +3,31 @@
 const principalIMG = document.getElementById("principal")
 const divPrincipal = document.getElementById("principalImage")
 const othersIMG = document.getElementsByClassName("otherImage")
+let srcArray = []
 
 
 
 const changePrincipal1 = () => {
-        let srcAttr = principalIMG.getAttribute("src")
-        const firstImage = othersIMG[0];
-        let srcAttrFirst = firstImage.getAttribute("src")
-        firstImage.removeAttribute("src")
-        firstImage.setAttribute("scr",srcAttr)
-        principalIMG.removeAttribute("src")
-        principalIMG.setAttribute("scr",srcAttrFirst)
+        srcArray[0] = principalIMG.getAttribute("src")
+        srcArray[1] = othersIMG[0].getAttribute("src")
+        console.log(srcArray)
+        principalIMG.setAttribute("src",srcArray[1])
+        othersIMG[0].setAttribute("src",srcArray[0])
 }
 const changePrincipal2 = () => {
-        let srcAttr = principalIMG.getAttribute("src")
-        const secondImage = othersIMG[1];
-        let srcAttrSecond = secondImage.getAttribute("src")
-        secondImage.removeAttribute("src")
-        secondImage.setAttribute("scr",srcAttr)
-        secondImage.setAttribute("scr",srcAttr)
-        principalIMG.setAttribute("scr",srcAttrSecond)
+        srcArray[0] = principalIMG.getAttribute("src")
+        srcArray[1] = othersIMG[1].getAttribute("src")
+        console.log(srcArray)
+        principalIMG.setAttribute("src",srcArray[1])
+        othersIMG[1].setAttribute("src",srcArray[0])
+        
 }
 const changePrincipal3 = () => {
-        let srcAttr = principalIMG.getAttribute("src")
-        const thirdImage = othersIMG[2];
-        let srcAttrThird = thirdImage.getAttribute("src")
-        thirdImage.removeAttribute("src")
-        thirdImage.setAttribute("scr",srcAttr)
-        thirdImage.setAttribute("scr",srcAttr)
-        principalIMG.setAttribute("scr",srcAttrThird)
+        srcArray[0] = principalIMG.getAttribute("src")
+        srcArray[1] = othersIMG[2].getAttribute("src")
+        console.log(srcArray)
+        principalIMG.setAttribute("src",srcArray[1])
+        othersIMG[2].setAttribute("src",srcArray[0])
 }
 
 
